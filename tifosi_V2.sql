@@ -31,11 +31,11 @@ CREATE TABLE IF NOT EXISTS `menu`
 	FOREIGN KEY (id_menu) REFERENCES focaccia(id_focaccia)
 );
 
-
 CREATE TABLE IF NOT EXISTS `ingredient`
 (
 	`id_ingredient` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	`nom_ingredient` VARCHAR(45)
+	`nom_ingredient` VARCHAR(45),
+	FOREIGN KEY (id_ingredient) REFERENCES focaccia(id_focaccia)
 );
 
 CREATE TABLE IF NOT EXISTS `marque`
@@ -47,15 +47,27 @@ CREATE TABLE IF NOT EXISTS `marque`
 CREATE TABLE IF NOT EXISTS `boisson`
 (
 	`id_boisson` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-	`nom_boisson` VARCHAR(45)
+	`nom_boisson` VARCHAR(45) NOT NULL,
+	FOREIGN KEY (id_boisson) REFERENCES menu(id_menu),
+	FOREIGN KEY (id_boisson) REFERENCES marque(id_marque)
 );
+
 
 CREATE TABLE IF NOT EXISTS `achete`
 (
     `id_achat` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    `id_client` INT,
-    `id_focaccia` INT,
-    `jour` DATE,
+    `id_client` INT NOT NULL,
+    `id_focaccia` INT NOT NULL,
+    `jour` DATE NOT NULL,
     FOREIGN KEY (id_client) REFERENCES client(id_client),
     FOREIGN KEY (id_focaccia) REFERENCES focaccia(id_focaccia)
 );
+
+CREATE TABLE IF NOT EXISTS `paye`
+(
+	`id_paye` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	`id_client` INT NOT NULL,
+	`id_menu` INT NOT NULL,
+	FOREIGN KEY (id_client) REFERENCES client(id_client),
+	FOREIGN KEY (id_menu) REFERENCES menu(id_menu)
+)
