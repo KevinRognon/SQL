@@ -1,8 +1,8 @@
--- CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
+CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
 
--- GRANT IF NOT EXISTS ALL PRIVILEGES ON Tifosi_V2.* TO 'tifosi'@'localhost';
+GRANT IF NOT EXISTS ALL PRIVILEGES ON Tifosi_V2.* TO 'tifosi'@'localhost';
 
---   FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS Tifosi_V2;
 
@@ -71,13 +71,3 @@ CREATE TABLE IF NOT EXISTS `paye`
 	FOREIGN KEY (id_client) REFERENCES client(id_client),
 	FOREIGN KEY (id_menu) REFERENCES menu(id_menu)
 );
-
-
--- INSERTIONS
-
-INSERT INTO focaccia (`nom_focaccia`, `prix_focaccia`) VALUES ('Mozaccia', 9.80), ('Gorgonzollaccia', 10.80), ('Raclaccia', 8.90), ('Emmentalaccia', 9.80), ('Tradizione', 8.90), ('Hawaienne', 11.20), ('Américaine', 10.80), ('Paysanne', 12.80), ('Emmentalaccia', 9.80);
-
-INSERT INTO ingredient (`nom_ingredient`) VALUES ('Ail'), ('Ananas'), ('Artichaut'), ('Bacon'), ('Base Tomate'), ('Base crème'), ('Champignon'), ('Chevre'), ('Cresson'), ('Emmental'), ('Gorgonzola'), ('Jambon cuit'), ('Jambon fumé'), ('Oeuf'), ('Oignon'), ('Olive noire'), ('Olive verte'), ('Parmesan'), ('Piment'), ('Poivre'), ('Pomme de terre'), ('Raclette'), ('Salami'), ('Tomate cerise');
-
-
-INSERT INTO marque (`nom_marque`) VALUES ('Coca-Cola'), ('Cristalline'), ('Monster'), ('Pepsico');
