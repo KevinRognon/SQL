@@ -1,8 +1,8 @@
-CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
+-- CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
 
-GRANT IF NOT EXISTS ALL PRIVILEGES ON Tifosi_V2.* TO 'tifosi'@'localhost';
+-- GRANT IF NOT EXISTS ALL PRIVILEGES ON Tifosi_V2.* TO 'tifosi'@'localhost';
 
-FLUSH PRIVILEGES;
+--   FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS Tifosi_V2;
 
