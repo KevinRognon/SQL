@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 -- Base de données : `tifosi_v2`
 --
 
+CREATE DATABASE IF NOT EXISTS `tifosi`;
+USE `tifosi`;
 -- --------------------------------------------------------
 
 --
