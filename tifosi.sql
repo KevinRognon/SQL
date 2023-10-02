@@ -34,7 +34,8 @@ CREATE TABLE IF NOT EXISTS `menu`
 CREATE TABLE IF NOT EXISTS `ingredient`
 (
     `id_ingredient` INT PRIMARY KEY AUTO_INCREMENT,
-    `nom_ingredient` VARCHAR(45)
+    `nom_ingredient` VARCHAR(45),
+    FOREIGN KEY (`id_ingredient`) REFERENCES focaccia(`id_focaccia`)
 );
 
 CREATE TABLE IF NOT EXISTS `marque`
@@ -47,7 +48,8 @@ CREATE TABLE IF NOT EXISTS `boisson`
 (
     `id_boisson` INT PRIMARY KEY AUTO_INCREMENT,
     `nom_boisson` VARCHAR(45) NOT NULL,
-    FOREIGN KEY (`id_boisson`) REFERENCES marque(`id_marque`)
+    FOREIGN KEY (`id_boisson`) REFERENCES marque(`id_marque`),
+    FOREIGN KEY (`id_boisson`) REFERENCES menu(`id_menu`)
 );
 
 
