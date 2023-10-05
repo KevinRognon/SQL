@@ -2,9 +2,9 @@ CREATE DATABASE IF NOT EXISTS tifosi;
 
 USE tifosi;
 
-CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
-GRANT ALL PRIVILEGES ON tifosi.* TO 'tifosi'@'localhost';
-FLUSH PRIVILEGES;
+-- CREATE USER IF NOT EXISTS 'tifosi'@'localhost' IDENTIFIED BY 'tifosi';
+-- GRANT ALL PRIVILEGES ON tifosi.* TO 'tifosi'@'localhost';
+-- FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS `client`
 (
