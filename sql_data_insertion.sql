@@ -51,18 +51,44 @@ VALUES
     ('Menu Paysanne', 15.50, 8);
 
 
--- INSERT INTO `boisson` (`nom_boisson`, `id_marque`) VALUES
---     ('Coca-cola zéro', 1),
---     ('Coca-cola original', 1),
---     ('Fanta citron', 1),
---     ('Fanta orange', 1),
---     ('Capri-sun', 1),
---     ('Pepsi', 4),
---     ('Pepsi Max Zéro', 4),
---     ('Lipton zéro citron', 4),
---     ('Lipton Peach', 4),
---     ('Monster energy ultra gold', 3),
---     ('Monster energy ultra blue', 3),
---     ('Eau de source', 2);
+INSERT INTO `boisson` (`nom_boisson`, `id_marque`) VALUES
+    ('Coca-cola zéro', 1),
+    ('Coca-cola original', 1),
+    ('Fanta citron', 1),
+    ('Fanta orange', 1),
+    ('Capri-sun', 1),
+    ('Pepsi', 4),
+    ('Pepsi Max Zéro', 4),
+    ('Lipton zéro citron', 4),
+    ('Lipton Peach', 4),
+    ('Monster energy ultra gold', 3),
+    ('Monster energy ultra blue', 3),
+    ('Eau de source', 2);
 
+
+INSERT INTO `ingredient` (`nom_ingredient`) VALUES
+    ('Ail'),
+    ('Ananas'),
+    ('Artichaut'),
+    ('Bacon'),
+    ('Base Tomate'),
+    ('Base crème'),
+    ('Champignon'),
+    ('Chevre'),
+    ('Cresson'),
+    ('Emmental'),
+    ('Gorgonzola'),
+    ('Jambon cuit'),
+    ('Jambon fumé'),
+    ('Oeuf'),
+    ('Oignon'),
+    ('Olive noire'),
+    ('Olive verte'),
+    ('Parmesan'),
+    ('Piment'),
+    ('Poivre'),
+    ('Pomme de terre'),
+    ('Raclette'),
+    ('Salami'),
+    ('Tomate cerise');
 
