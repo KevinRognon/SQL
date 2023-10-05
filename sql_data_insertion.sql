@@ -14,8 +14,6 @@ INSERT INTO `client` (`nom_client`, `age`, `cp_client`) VALUES
 ('Marie Renaud', 27, '69003');
 
 
--- Ajout des marques de boissons
-
 INSERT INTO `marque` (`nom_marque`) VALUES
     ('Coca-cola'),
     ('Cristalline'),
@@ -36,9 +34,6 @@ INSERT INTO `focaccia` (`nom_focaccia`, `prix_focaccia`) VALUES
 
 
 
--- Ajout des menus
-
--- Création des menus pour chaque focaccia
 INSERT INTO `menu` (`nom_menu`, `prix_menu`, `id_focaccia`) VALUES
     ('Menu Mozaccia', 12.50, 1),
     ('Menu Gorgonzollaccia', 13.50, 2),
@@ -92,7 +87,6 @@ INSERT INTO `ingredient` (`nom_ingredient`) VALUES
     ('Tomate cerise'),
     ('Mozarella');
 
--- Insertion des associations focaccia-ingrédients dans la table "comprend"
 
 -- Mozaccia
 INSERT INTO `comprend` (`id_focaccia`, `id_ingredient`) VALUES
